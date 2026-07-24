@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diane Guo — Product Manager</title>
+  <meta name="description" content="Diane Guo is a product manager based in Canada, turning intricate systems in AI, crypto, cybersecurity, travel and healthcare into clear, human-centered products." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..700&family=Hanken+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ─────────────── NAV ─────────────── -->
+  <header class="nav" id="top">
+    <a class="nav__brand" href="#top">
+      <span class="nav__mark">DG</span>
+      <span class="nav__name">Diane&nbsp;Guo</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="pill pill--live" href="#contact">
+      <span class="pill__dot"></span> Open to work
+    </a>
+  </header>
+
+  <main>
+    <!-- ─────────────── HERO ─────────────── -->
+    <section class="hero">
+      <div class="hero__meta">
+        <span class="tag">Product Manager</span>
+        <span class="tag">Canada · UTC−5</span>
+        <span class="tag">4 years</span>
+      </div>
+
+      <div class="hero__stage" id="hero-stage">
+        <canvas id="hero-canvas" aria-hidden="true"></canvas>
+        <h1 class="hero__title" id="hero-title">Diane&nbsp;Guo</h1>
+      </div>
+
+      <p class="hero__tagline">
+        I turn <em>complex systems</em> into clear products.
+      </p>
+      <p class="hero__hint" aria-hidden="true">✦ move your cursor through it — click to shift shape</p>
+
+      <div class="hero__body">
+        <img class="hero__avatar" src="images/avatar.svg" width="120" height="120"
+             alt="Illustrated portrait of Diane Guo" />
+        <p>
+          I'm <strong>Diane</strong> — a product manager working across AI, crypto,
+          cybersecurity, travel and healthcare. I turn intricate systems into products
+          people actually understand. Trained in industrial design at OCAD University.
+        </p>
+      </div>
+
+      <div class="hero__actions">
+        <a class="btn btn--solid" href="#work">See selected work <span class="btn__arrow">↘</span></a>
+        <a class="btn btn--ghost" href="#contact">Get in touch</a>
+      </div>
+
+      <dl class="stats">
+        <div><dt>Years in product</dt><dd data-count="4">4</dd></div>
+        <div><dt>Products shipped</dt><dd data-count="20">20+</dd></div>
+        <div><dt>Industries</dt><dd data-count="5">5</dd></div>
+      </dl>
+    </section>
+
+    <!-- ─────────────── MARQUEE ─────────────── -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Product Strategy</span><span>✦</span><span>Roadmapping</span><span>✦</span>
+        <span>Discovery</span><span>✦</span><span>Experimentation</span><span>✦</span>
+        <span>0→1 Shipping</span><span>✦</span>
+        <span>Product Strategy</span><span>✦</span><span>Roadmapping</span><span>✦</span>
+        <span>Discovery</span><span>✦</span><span>Experimentation</span><span>✦</span>
+        <span>0→1 Shipping</span><span>✦</span>
+      </div>
+    </div>
+
+    <!-- ─────────────── WORK ─────────────── -->
+    <section class="section" id="work">
+      <div class="section__head">
+        <span class="section__index">01</span>
+        <h2 class="section__title">Selected work</h2>
+        <p class="section__lead">Four case studies across regulated, high-stakes domains.</p>
+      </div>
+
+      <div class="cases">
+        <article class="case reveal">
+          <a class="case__media" href="#work">
+            <img src="images/case-porter.svg" alt="Preview of the Porter Airlines booking redesign" />
+          </a>
+          <div class="case__info">
+            <div class="case__tags"><span>Travel</span><span>0→1</span></div>
+            <h3 class="case__title">Porter Airlines — end-to-end booking</h3>
+            <p>Owned the customer booking roadmap and aligned web, native and in-airport
+               teams around one measurable funnel.</p>
+            <span class="case__link">Case study →</span>
+          </div>
+        </article>
+
+        <article class="case reveal">
+          <a class="case__media" href="#work">
+            <img src="images/case-teladoc.svg" alt="Preview of the Teladoc care dashboard" />
+          </a>
+          <div class="case__info">
+            <div class="case__tags"><span>Healthcare</span><span>Dashboard</span></div>
+            <h3 class="case__title">Teladoc Health — clinician console</h3>
+            <p>Shaped a calm, high-density console that helps clinicians triage virtual
+               visits without losing the human on the other side.</p>
+            <span class="case__link">Case study →</span>
+          </div>
+        </article>
+
+        <article class="case reveal">
+          <a class="case__media" href="#work">
+            <img src="images/case-crypto.svg" alt="Preview of a self-custody crypto wallet" />
+          </a>
+          <div class="case__info">
+            <div class="case__tags"><span>Crypto</span><span>0→1</span></div>
+            <h3 class="case__title">Ledgerline — self-custody wallet</h3>
+            <p>Made self-custody legible for newcomers: plain-language signing,
+               recoverable keys, and risk shown before every transaction.</p>
+            <span class="case__link">Case study →</span>
+          </div>
+        </article>
+
+        <article class="case reveal">
+          <a class="case__media" href="#work">
+            <img src="images/case-security.svg" alt="Preview of a cybersecurity threat console" />
+          </a>
+          <div class="case__info">
+            <div class="case__tags"><span>Cybersecurity</span><span>AI</span></div>
+            <h3 class="case__title">Sentry — threat triage console</h3>
+            <p>Defined an AI-assisted triage surface that ranks signal over noise and lets
+               analysts act on a threat in a single, auditable flow.</p>
+            <span class="case__link">Case study →</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ─────────────── ABOUT ─────────────── -->
+    <section class="section section--about" id="about">
+      <div class="section__head">
+        <span class="section__index">02</span>
+        <h2 class="section__title">About</h2>
+      </div>
+      <div class="about">
+        <p class="about__lead">
+          I like the problems that don't fit on a screen yet — regulated flows,
+          dense data, decisions with real consequences.
+        </p>
+        <p>
+          My background in industrial design taught me to sweat systems, not just
+          features. I bring that to product: mapping the whole system, finding the one
+          decision that carries the weight, and driving it until the path is obvious.
+        </p>
+        <p>
+          I work best embedded with design and engineering — prototyping ideas early,
+          owning the roadmap, and shipping in tight loops. Recognized on the Wall of
+          Portfolios with a Silver badge.
+        </p>
+        <ul class="chips">
+          <li>Product strategy</li><li>Roadmapping</li><li>Discovery</li>
+          <li>User research</li><li>Experimentation</li><li>Analytics</li>
+          <li>Go-to-market</li><li>Stakeholder alignment</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ─────────────── EXPERIENCE ─────────────── -->
+    <section class="section" id="experience">
+      <div class="section__head">
+        <span class="section__index">03</span>
+        <h2 class="section__title">Experience</h2>
+      </div>
+      <ol class="timeline">
+        <li class="timeline__item reveal">
+          <span class="timeline__years">2023 — Now</span>
+          <div class="timeline__body">
+            <h3>Stealth Startups</h3>
+            <p>Founding PM across AI &amp; crypto products — from discovery to shipped 0→1 launches.</p>
+          </div>
+          <span class="timeline__role">Founding Product Manager</span>
+        </li>
+        <li class="timeline__item reveal">
+          <span class="timeline__years">2021 — 2023</span>
+          <div class="timeline__body">
+            <h3>Teladoc Health Canada</h3>
+            <p>Owned clinician and patient tooling for virtual care; drove the roadmap end to end.</p>
+          </div>
+          <span class="timeline__role">Product Manager</span>
+        </li>
+        <li class="timeline__item reveal">
+          <span class="timeline__years">2019 — 2021</span>
+          <div class="timeline__body">
+            <h3>Porter Airlines</h3>
+            <p>Led customer-experience initiatives and the cross-platform product roadmap.</p>
+          </div>
+          <span class="timeline__role">Product Manager</span>
+        </li>
+        <li class="timeline__item reveal">
+          <span class="timeline__years">2015 — 2019</span>
+          <div class="timeline__body">
+            <h3>OCAD University</h3>
+            <p>BDes, Industrial Design. Foundations in systems thinking, materials and human factors.</p>
+          </div>
+          <span class="timeline__role">Education</span>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ─────────────── CONTACT ─────────────── -->
+    <section class="section section--contact" id="contact">
+      <span class="section__index">04</span>
+      <h2 class="contact__title">Let's build<br />something clear.</h2>
+      <p class="contact__sub">Open to product management roles and select advisory. Canada-based, working remote.</p>
+      <a class="btn btn--solid btn--big" href="mailto:hello@dianeguo.design">hello@dianeguo.design <span class="btn__arrow">↗</span></a>
+      <div class="contact__socials">
+        <a href="#contact">LinkedIn</a><a href="#contact">Dribbble</a>
+        <a href="#contact">Read.cv</a><a href="#contact">Twitter / X</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© 2026 Diane Guo</span>
+    <span>Designed &amp; built in Canada</span>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <script src="particles.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

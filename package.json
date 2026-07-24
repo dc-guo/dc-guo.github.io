@@ -1,0 +1,14 @@
+{
+  "name": "designer-portfolio",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.47.0"
+  }
+}
