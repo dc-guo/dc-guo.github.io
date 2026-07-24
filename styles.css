@@ -303,6 +303,22 @@ img { display: block; max-width: 100%; }
 }
 .case:hover .case__link { transform: translateX(5px); }
 
+.learning {
+  margin-top: clamp(44px, 6vw, 76px);
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+}
+.learning__label {
+  font-family: "Space Mono", monospace;
+  font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--ink-soft); margin-bottom: 16px;
+}
+.learning__list { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; }
+.learning__list li {
+  padding: 8px 15px; border: 1px solid var(--line); border-radius: 100px;
+  font-size: 0.9rem; background: var(--paper-2);
+}
+
 /* ============================================================
    ABOUT
    ============================================================ */
