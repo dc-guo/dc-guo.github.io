@@ -103,7 +103,6 @@
     const nameLines = W < 680 ? ["DIANE", "GUO"] : ["DIANE GUO"];
     shapes = [
       { pts: samplePoints((o) => drawText(o, nameLines)) },
-      { pts: samplePoints(drawCat) },
       { pts: samplePoints((o) => drawText(o, ["PRODUCT", "MANAGER"])) },
     ];
   }
@@ -151,49 +150,6 @@
       o.fillText(ln, W / 2, y);
       o.strokeText(ln, W / 2, y);
     });
-  }
-
-  // Cute line-art cat head — thick rounded strokes, ears, whisker nubs.
-  function drawCat(o) {
-    const boxW = 100, boxH = 96;
-    const s = Math.min((W * 0.5) / boxW, (H * 0.76) / boxH);
-    o.save();
-    o.translate((W - boxW * s) / 2, (H - boxH * s) / 2);
-    o.scale(s, s);
-    o.lineJoin = "round";
-    o.lineCap = "round";
-
-    // Continuous head outline with short triangular ears + soft chin
-    o.lineWidth = 10;
-    o.stroke(new Path2D(
-      "M44 32 " +
-      "L28 14 L18 28 L26 36 " +
-      "C12 42 4 56 8 72 " +
-      "C12 88 30 96 50 96 " +
-      "C70 96 88 88 92 72 " +
-      "C96 56 88 42 74 36 " +
-      "L82 28 L72 14 L56 32 " +
-      "C52 28 48 28 44 32 Z"
-    ));
-
-    // Side markings: upper nub, longer mid whisker, shorter lower whisker
-    o.lineWidth = 8;
-    o.stroke(new Path2D(
-      "M22 40 L14 37 M18 54 L4 54 M22 68 L12 73 " +
-      "M78 40 L86 37 M82 54 L96 54 M78 68 L88 73"
-    ));
-
-    // Eyes — large vertical ovals, spaced apart
-    o.beginPath();
-    o.ellipse(36, 54, 5.2, 9.5, 0, 0, Math.PI * 2);
-    o.ellipse(64, 54, 5.2, 9.5, 0, 0, Math.PI * 2);
-    o.fill();
-
-    // Nose — horizontal oval under the eyes
-    o.beginPath();
-    o.ellipse(50, 68, 5.5, 3.4, 0, 0, Math.PI * 2);
-    o.fill();
-    o.restore();
   }
 
   // ---------- assign a shape to the pool (gradual morph) ----------
