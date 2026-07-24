@@ -265,7 +265,7 @@ img { display: block; max-width: 100%; }
 .case__media {
   display: block; border-radius: var(--radius); overflow: hidden;
   border: 1px solid var(--line); background: var(--paper-2);
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1 / 1;
 }
 .case__media img {
   width: 100%; height: 100%; object-fit: cover;
