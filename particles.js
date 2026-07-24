@@ -129,6 +129,7 @@
   function drawText(o, lines) {
     o.textAlign = "center";
     o.textBaseline = "middle";
+    o.lineJoin = "round";
     const maxW = W * 0.92;
     let size = H * (lines.length > 1 ? 0.42 : 0.62);
     for (let i = 0; i < 48; i++) {
@@ -139,9 +140,17 @@
       size *= 0.94;
     }
     o.font = `900 ${size}px "Fraunces", Georgia, serif`;
+    // Fraunces is high-contrast: N/A/M have hairline verticals thinner than the
+    // sample gap, so they sample sparse ("N lacking a side"). Stroke the glyphs
+    // to fatten those thin strokes so every side reads solid.
+    o.lineWidth = size * 0.025;
     const lineH = size * 1.02;
     const startY = H / 2 - (lineH * (lines.length - 1)) / 2;
-    lines.forEach((ln, i) => o.fillText(ln, W / 2, startY + i * lineH));
+    lines.forEach((ln, i) => {
+      const y = startY + i * lineH;
+      o.fillText(ln, W / 2, y);
+      o.strokeText(ln, W / 2, y);
+    });
   }
 
   // Cute line-art cat head — thick rounded strokes, ears, whisker nubs.
