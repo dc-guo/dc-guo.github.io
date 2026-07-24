@@ -18,7 +18,7 @@
 
   const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  const COLORS = { ink: "#1c1a16", accent: "#e8451f", pine: "#17544a" };
+  const COLORS = { ink: "#22314c", accent: "#ef7a5e", pine: "#6f97e8", honey: "#f2c14e" };
   const SPRING = 0.045;        // pull toward home — gentle so scatter lingers
   const SPRING_STRAY = 0.012;
   const FRICTION = 0.9;        // low damping → repelled grains coast & spread
@@ -71,7 +71,7 @@
       let p = particles[i];
       if (!p) {
         const roll = Math.random();
-        const color = roll < 0.13 ? COLORS.accent : roll < 0.18 ? COLORS.pine : COLORS.ink;
+        const color = roll < 0.10 ? COLORS.accent : roll < 0.16 ? COLORS.pine : roll < 0.21 ? COLORS.honey : COLORS.ink;
         p = particles[i] = {
           x: Math.random() * W, y: Math.random() * H,
           vx: 0, vy: 0,

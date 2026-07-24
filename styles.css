@@ -1,16 +1,17 @@
 /* ============================================================
-   Colin LeBlanc — Portfolio
-   Aesthetic: warm editorial. Cream paper, warm ink, vermilion.
+   Diane Guo — Portfolio
+   Aesthetic: pastel gradient. Vanilla base, dreamy-blue accent,
+   coral/pink/honey sparks. Serious but whimsical.
    ============================================================ */
 
 :root {
-  --paper:      #f2ede2;
-  --paper-2:    #ebe4d5;
-  --ink:        #1c1a16;
-  --ink-soft:   #4d4840;
-  --accent:     #e8451f;
-  --accent-2:   #17544a;   /* deep pine, secondary */
-  --line:       #d8cfbd;
+  --paper:      #fdf7e8;   /* warm vanilla base */
+  --paper-2:    #eaf0fb;   /* cool pale-blue surface */
+  --ink:        #22314c;   /* deep navy */
+  --ink-soft:   #55617b;   /* blue-gray */
+  --accent:     #3e668f;   /* dreamy blue — primary accent */
+  --accent-2:   #ef7a5e;   /* coral — secondary spark */
+  --line:       #e3e5ee;   /* pale blue-gray hairline */
   --radius:     18px;
   --ease:       cubic-bezier(0.22, 1, 0.36, 1);
   --maxw:       1160px;
@@ -19,10 +20,17 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
 
 body {
-  background: var(--paper);
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(70% 80vh at 10% 0%,   rgba(255, 219, 131, 0.80), transparent 72%),
+    radial-gradient(66% 78vh at 90% 3%,   rgba(129, 169, 238, 0.72), transparent 72%),
+    radial-gradient(56% 70vh at 50% 0%,   rgba(246, 178, 208, 0.60), transparent 70%),
+    radial-gradient(52% 62vh at 0% 30%,   rgba(170, 180, 231, 0.45), transparent 72%),
+    radial-gradient(52% 58vh at 100% 34%, rgba(198, 232, 214, 0.45), transparent 72%);
+  background-repeat: no-repeat;
   color: var(--ink);
   font-family: "Hanken Grotesk", sans-serif;
   font-size: clamp(16px, 1.05vw, 18px);
@@ -279,7 +287,7 @@ img { display: block; max-width: 100%; }
 .case__tags span {
   font-family: "Space Mono", monospace; font-size: 0.7rem;
   letter-spacing: 0.05em; text-transform: uppercase;
-  color: var(--accent-2);
+  color: var(--accent);
   padding: 4px 10px; border: 1px solid var(--line); border-radius: 100px;
 }
 .case__title {
