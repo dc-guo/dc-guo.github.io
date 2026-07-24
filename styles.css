@@ -197,6 +197,7 @@ img { display: block; max-width: 100%; }
 .hero__avatar {
   flex: none; width: 96px; height: 96px; border-radius: 50%;
   border: 1px solid var(--line); background: var(--paper-2);
+  object-fit: cover;
 }
 @keyframes fade { to { opacity: 1; } }
 
