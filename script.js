@@ -29,13 +29,13 @@ if ("IntersectionObserver" in window) {
 const stats = document.querySelectorAll(".stats dd[data-count]");
 const animateCount = (el) => {
   const target = parseInt(el.dataset.count, 10);
-  const suffix = el.textContent.replace(/[0-9]/g, ""); // keep "+" etc.
+  const suffix = el.textContent.replace(/[0-9,]/g, ""); // keep "+", "%", etc.
   const duration = 900;
   const start = performance.now();
   const tick = (now) => {
     const p = Math.min((now - start) / duration, 1);
     const eased = 1 - Math.pow(1 - p, 3);
-    el.textContent = Math.round(target * eased) + (p === 1 ? suffix : "");
+    el.textContent = Math.round(target * eased).toLocaleString() + (p === 1 ? suffix : "");
     if (p < 1) requestAnimationFrame(tick);
   };
   requestAnimationFrame(tick);
