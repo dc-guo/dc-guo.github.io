@@ -124,7 +124,7 @@ if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: re
     target = clamp(target);
   });
 
-  // Glide to in-page targets (nav, "Open to work", back-to-top).
+  // Glide to in-page targets (nav brand, section links, back-to-top).
   document.querySelectorAll('a[href^="#"]').forEach((a) => {
     a.addEventListener("click", (e) => {
       const id = a.getAttribute("href");
@@ -132,7 +132,12 @@ if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: re
       const el = document.querySelector(id);
       if (!el) return;
       e.preventDefault();
-      target = clamp(el.getBoundingClientRect().top + window.scrollY - NAV_OFFSET);
+      // "#top" is the sticky nav (always at viewport top), so its rect can't
+      // give the page origin — send back-to-top to the true top (the hero).
+      target =
+        id === "#top"
+          ? 0
+          : clamp(el.getBoundingClientRect().top + window.scrollY - NAV_OFFSET);
       start();
       history.pushState(null, "", id);
     });

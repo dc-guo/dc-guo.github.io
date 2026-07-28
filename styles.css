@@ -61,12 +61,6 @@ img { display: block; max-width: 100%; }
 
 .section__head { margin-bottom: clamp(40px, 6vw, 72px); }
 
-.section__index {
-  font-family: "Space Mono", monospace;
-  font-size: 0.8rem; letter-spacing: 0.2em;
-  color: var(--accent);
-}
-
 .section__title {
   font-family: "Fraunces", serif;
   font-weight: 500;
@@ -117,24 +111,6 @@ img { display: block; max-width: 100%; }
 }
 .nav__links a:hover { color: var(--ink); }
 .nav__links a:hover::after { width: 100%; }
-
-.pill {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 8px 15px; border-radius: 100px;
-  font-size: 0.82rem; font-weight: 600;
-  border: 1px solid var(--line);
-}
-.pill--live { background: var(--paper-2); }
-.pill__dot {
-  width: 8px; height: 8px; border-radius: 50%; background: var(--accent-2);
-  box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent-2) 60%, transparent);
-  animation: ping 2.4s var(--ease) infinite;
-}
-@keyframes ping {
-  0%   { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent-2) 55%, transparent); }
-  70%  { box-shadow: 0 0 0 9px transparent; }
-  100% { box-shadow: 0 0 0 0 transparent; }
-}
 
 /* ============================================================
    HERO
@@ -375,9 +351,7 @@ img { display: block; max-width: 100%; }
 /* ============================================================
    CONTACT
    ============================================================ */
-.section--contact { text-align: center; }
-.section--contact .section__index { display: inline-block; margin-bottom: 20px; }
-.contact__title {
+.section--contact { text-align: center; }.contact__title {
   font-family: "Fraunces", serif; font-weight: 400;
   font-size: clamp(2.8rem, 10vw, 7rem); line-height: 0.95;
   letter-spacing: -0.03em;
