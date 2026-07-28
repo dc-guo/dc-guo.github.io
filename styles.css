@@ -18,6 +18,19 @@
   --gutter:     clamp(20px, 5vw, 64px);
 }
 
+/* Accessibility: honor the OS "increase contrast" setting. Darkens muted
+   text and the accent to AAA (7:1+), borders to 3:1, and drops the pastel
+   gradient for a solid backdrop — so low-vision users get maximum contrast
+   everywhere. The default palette (already WCAG AA) is untouched. */
+@media (prefers-contrast: more) {
+  :root {
+    --ink-soft: #363e52;
+    --accent:   #2e5175;
+    --line:     #7b8194;
+  }
+  body { background-image: none; }
+}
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; scroll-padding-top: 80px; }
