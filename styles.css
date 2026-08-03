@@ -344,10 +344,8 @@ img { display: block; max-width: 100%; }
   display: grid; grid-template-columns: 160px 1fr auto; gap: 24px;
   align-items: baseline;
   padding: 28px 0; border-top: 1px solid var(--line);
-  transition: padding-left 0.35s var(--ease);
 }
 .timeline__item:last-child { border-bottom: 1px solid var(--line); }
-.timeline__item:hover { padding-left: 14px; }
 .timeline__years { font-family: "Space Mono", monospace; font-size: 0.82rem; color: var(--accent); }
 .timeline__body h3 {
   font-family: "Fraunces", serif; font-weight: 500;
